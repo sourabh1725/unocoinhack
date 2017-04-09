@@ -1,15 +1,38 @@
 extends layout
 
 block content
-  div(class="container")
+  div(id="main", class="container")
     div(class="row")
       div(class="col s12") 
         div(class="row center")
           h1 SAHYOG
-          p(class="flow-text") Solving common needs
-          div(class="row right")
-            form(name="user_req", method="post", action="/newrequest")
-              
+          p(class="flow-text") Make a Wish
+        div(class="row")
+          form(name="user_req", method="post", action="/wisher/makewish")
+            div(class="row")
+              div(class="input-field col s5")
+                input(id="user_mobile", name="user_mobile",type="text", class="validate")
+                label(id="user_mobile") Mobile
+              div(class="input-field col s5")
+                input(id="user_name", name="user_name", type="text", class="validate")
+                label(id="user_name") Name
+              div(class="input-field col s2")
+                input(id="user_need", name="user_need", type="text", class="validate")
+                label(id="user_need") Amount In BTC
+              div(class="input-field col s12")
+                input(id="user_reason", name="user_reason", type="text", class="validate")
+                label(id="user_reason") Reason
+              div(class="input-field col s12")
+                input(id="user_bitcoin_address", name="user_bitaddress", type="text", class="validate")
+                label(id="user_reason") Bitcoin Address
+              div(class="col s12")
+                p Upload Your Identification Documents
+                input(id="user_document", type="file")
+                
+              div(class="input-field col s12")
+                div(class="right")
+                  button(type="submit", class="waves-effect waves-light btn") POST Request
+
 
         
         

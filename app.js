@@ -4,10 +4,19 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+require('dotenv').config();
 var index = require('./routes/index');
 var users = require('./routes/users');
-
+var unocoin = require('./routes/unocoin');
+var donate = require('./routes/donate');
+var mainpage = require('./routes/mainpage');
+var signup = require('./routes/signup');
+var signin = require('./routes/signin');
+var userprofile = require('./routes/userprofile');
+var bankdetails = require('./routes/bankdetails');
+var deposit = require('./routes/deposit');
+var buybitcoin = require('./routes/buybitcoin');
+var sendbitcoin = require('./routes/sendbitcoin');
 var app = express();
 
 // view engine setup
@@ -22,9 +31,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use('/wisher', index);
 app.use('/users', users);
-
+app.use('/unocoin', unocoin);
+app.use('/donate', donate);
+app.use('/', mainpage);
+app.use('/', signup);
+app.use('/',signin);
+app.use('/user', userprofile);
+app.use('/', bankdetails);
+app.use('/', deposit);
+app.use('/', buybitcoin);
+app.use('/', sendbitcoin);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

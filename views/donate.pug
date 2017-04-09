@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    div(class="container-fluid blue darken-4", style="min-height:800px;")
+        div(class="center") 
+            h1(class="yellow") 
+                span(style="color:black;") Wishlist
+                br
+                span(class="flow-text") Send Bitcoins, Fullfill a Dream 
+        div(class="container-fluid white", style="padding-left:20px;")
+            table
+                thead
+                    tr
+                        th Bitcoin Address
+                        th Name
+                        th Reason
+                        th Amount In BTC
+                        th Amount Received
+                        th Day Left
+                        th Action
+                        th Vote Me
+                tbody
+                    each doner in mydata
+                        tr
+                            td #{doner.bitcoin_address}
+                            td #{doner.donername}
+                            td #{doner.reason} 
+                            td #{doner.amount_req}
+                            td #{doner.amount_rec}
+                            td #{doner.daysleft} Days
+                            td 
+                                a(class="waves-effect waves-light btn", href="http://localhost:3000/send/e4f009cb3cb49aa8680e7a2509fb1fb9b4f3403a/"+doner.bitcoin_address+"/0.01294649") Donate
+                            td 
+                                a(class="waves-effect waves-light btn", href="/upvote/") Vote Up

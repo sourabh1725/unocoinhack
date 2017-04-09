@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="row")
+        div(class="row center")
+            h1 User Profile
+        form(name="user_profile", method="post", action=frm_action)
+            div(class="row")
+                div(class="input-field col s6")
+                    input(id="u_name", name="u_name", type="text", class="validate", value="surya")
+                    label(for="u_name") Your Name
+                div(class="input-field col s6")
+                    input(id="u_mobile", name="u_mobile", type="text", class="validate", value="945551067")
+                    label(for="u_mobile") Your Mobile
+                div(class="input-field col s6")
+                    input(id="u_pannumber", name="u_pannumber", type="text", class="validate", value="BAD876G567")
+                    label(for="u_pannumber") Your Pan Number
+                div(class="input-field col s6")
+                    input(id="u_address", name="u_address", type="text", class="validate", value="Abc #1024 6th cross Bangalore")
+                    label(for="u_address") Your Address
+                div(class="input-field col s6")
+                    input(id="u_state", name="u_state", type="text", class="validate", value="raj")
+                    label(for="u_state") Your State
+                div(class="input-field col s6")
+                    input(id="u_city", name="u_city", type="text", class="validate", value="ajmer")
+                    label(for="u_city") Your City
+                div(class="input-field col s6")
+                    input(id="u_pincode", name="u_pincode", type="text", class="validate", value="305001")
+                    label(for="u_pincode") Your pincode
+                div(class="input-field col s6")
+                    input(id="u_bank_accnum", name="u_bank_accnum", type="text", class="validate", value="124548895")
+                    label(for="u_bank_accnum") Your bank Account Number
+                div(class="input-field col s6")
+                    input(id="u_ifsc", name="u_ifsc", type="text", class="validate", value="VYSY0002270")
+                    label(for="u_ifsc") Your bank ifsc Number
+                div(class="input-field col s6")
+                    input(id="u_pancard_photo", name="u_pancard_photo", type="text", class="validate")
+                    label(for="u_pancard_photo") Your Pan Card Photo
+                div(class="input-field col s6")
+                    input(id="u_photo", name="u_photo", type="text", class="validate")
+                    label(for="u_photo") Your Photo
+                div(class="input-field col s6")
+                    input(id="u_address_proof", name="u_address_proof", type="text", class="validate")
+                    label(for="u_address_proof") Your Address Proof Photo
+                div(class="input-field col s6")
+                    input(id="u_id_proof", name="u_id_proof", type="text", class="validate")
+                    label(for="u_id_proof") Your id Proof Photo
+                div(class="input-field col s12")
+                    button(type="submit", class="waves-effect waves-light btn") Update Profile

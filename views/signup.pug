@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div(class="container")
+        div(class="row")
+            div(class="row center")
+                h1 Sign Up
+            form(name="signup", method="POST", action="/signup")
+                div(class="row col s6")
+                    div(class="input-field col s12")
+                        input(type="email", name="email_id", id="email_id")
+                        label(for="email_id") Your email
+                    div(class="input-field col s12")
+                        input(type="password", name="password", id="password")
+                        label(for="password") Your Password
+                    div(class="col s12")
+                        button(type="submit", class="waves-effect waves-light btn") Sign Up                        
